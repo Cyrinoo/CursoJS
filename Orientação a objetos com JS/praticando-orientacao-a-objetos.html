@@ -1,0 +1,65 @@
+<html>
+    <body>
+        <script>
+            // function Pessoa(){
+            //     this.nome = 'Pedro'
+            //     this.idade = '17'
+            //     // pode criar funções que interagem com os objetos
+            //     this.printNome = function(numero){
+            //         alert(numero)
+            //     }
+            // }
+            // var pessoa = new Pessoa();
+            // var pessoa_2 = new Pessoa();
+
+            // pessoa_2.nome = 'João';
+
+            // pessoa.printNome(10);
+            // pessoa.printNome(pessoa_2.nome)
+
+            // function Animal(nome,peso,raca){
+            //     // isso quer dizer que quando esta instanciando ja pode estar definido
+            //     this.nome = nome;
+            //     this.peso = peso;
+            //     this.raca = raca;
+            // }
+
+            // // pode manipular de acordo com o this permitir assim podendo manipular e atribuir valor para a variavel
+            
+            // // criando a variavel animal puxando com o sinal de igual o objeto Animal, manipulando com qual outro tipo de nome
+
+            // animal = new Animal('Cachorro');
+            // animal2 = new Animal ('Gato',12,'pastor');
+
+            // alert(animal.nome);
+
+            // alert(animal2.peso,);
+            
+            // passar um objeto como parametro da função
+             function Pessoa(){
+                    this.nome = 'Pedro'
+                    this.idade = '17'
+                    // pode criar funções que interagem com os objetos
+                    this.printNome = function(numero){
+                        alert(numero)
+                    };
+                    // função que pode alterar o atributo no futuro
+                    this.returnAnimal = function(animal){
+                        return animal
+                    }
+                }
+            function Animal(){
+                this.nome = 'cachorro'
+                this.raca = 'pastor'
+            }
+                var pessoa = new Pessoa();
+                var animal = new Animal();
+                // alterando um novo atributo
+                animal.raca = 'bulldog';
+
+                // retornando um objeto e adicionando um novo parametro
+                alert(pessoa.returnAnimal(animal).raca);
+
+        </script>
+    </body>
+</html>

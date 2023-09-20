@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <script>
+            class Animal{
+                // construtor toda vez que cria um objeto (instaciar) pode pensar algum parametro 
+                constructor(nome){
+                    this.nome = nome;
+                }
+                    // método
+                    printNome(){
+                        return this.nome;
+                }
+                // método
+                
+            }
+            // declarar classe cahorro e herda do Animal
+            class Cachorro extends Animal{
+                constructor(nome){
+                    // super é chamar o parametro da classe pai
+                    super(nome);
+                    // não exclui de criar novas possibilidade
+                    this.raca = 'bulldog';
+                }
+                printRaca(){
+                    return this.raca;
+                }
+            }
+
+            cachorro = new Cachorro('Pastor');
+
+            alert(cachorro.printRaca());
+        </script>
+    </body>
+</html>

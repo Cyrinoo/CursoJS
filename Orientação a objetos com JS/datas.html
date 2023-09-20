@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            // // sem colocar no construtor algo no Date o JS entende que quer a data atual 
+            // var data = new Date();
+            // // dia do mes
+            // alert(data.getDate());
+            // // dia da semana
+            // alert(data.gatDate());
+            // // ano
+            // alert(data.getFullYear());
+            // // horas
+            // alert(date.getHours());
+            // // minutos
+            // alert(date.getMinutes())
+
+            // calcular a diferença de data
+            var data = new Date('19/09/2023');
+
+            var data2 = new Date('19/10/2023');
+
+            var diferenca = (data.getTime() - data2.getTime()) / (1000*3600*24);
+            alert(diferenca);
+        </script>
+    </body>
+</html>
