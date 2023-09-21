@@ -1,0 +1,31 @@
+<html>
+<body>
+    <!-- Crie uma função que recebe um array de 2 números e coloque eles em ordem crescente. Não use o método sort
+ -->
+    <script>
+function atividade(array) {
+    if (array.length !== 3) {
+        console.log('O array deve conter exatamente 3 números.');
+        return;
+    }
+
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 2 - i; j++) {
+            if (array[j] > array[j + 1]) {
+                // Trocar os números de lugar se estiverem fora de ordem
+                const temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+
+    console.log('Array em ordem crescente:', array);
+}
+
+var numeros = [3, 1, 2];
+atividade(numeros);
+
+    </script>
+</body>
+</html>
