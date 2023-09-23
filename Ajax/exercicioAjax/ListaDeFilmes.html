@@ -1,0 +1,35 @@
+<html>
+<body>
+    <div class="container"></div>
+    <script>
+        // API Lista de filmes
+        fetch('https://api.themoviedb.org/3/movie/popular?api_key=506fadb0256c13349acc05dabebf9604&language=en-US&page=1', {
+            method: 'GET'
+            // retornou uma lista completa pro JSON
+        }).then(response => response.json()).then((json) => {
+            var container = document.querySelector('.container');
+            // colocou uma guia pros resultados inserindo o MAP
+            json.results.map(function (val) {
+                // dentro do container os resultados
+                container.innerHTML += `
+                    <p class='titulo'>${val.title}<hr></p>
+                    // descrição oculta para as functions de JS
+                    <div style='display: none' class='descricao'>${val.overview}</div>`;
+            })
+            var titulos = document.querySelectorAll('.titulo');
+            // selecionando os titulos filmes e colocando em um loop para adicionar um evento de click para cada filme
+
+            for (var i = 0; i < titulos.length; i++) {
+                titulos[i].addEventListener('click', (t) => {
+                    var descricao = t.target.querySelector('.descricao');
+                    if (descricao.style.display === 'none' || descricao.style.display === '') {
+                        descricao.style.display = 'block';
+                    } else {
+                        descricao.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
